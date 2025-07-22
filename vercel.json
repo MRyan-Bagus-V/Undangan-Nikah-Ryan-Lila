@@ -1,5 +1,4 @@
 {
-  "outputDirectory": "public",
   "builds": [
     {
       "src": "package.json",
@@ -11,5 +10,6 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ]
+  ],
+  "outputDirectory": "public"
 }
