@@ -13,7 +13,7 @@
         "lint:js": "eslint js",
         "lint:css": "stylelint css",
         "lint:html": "htmlhint **/*.html",
-        "dev": "npx esbuild js/*.js --bundle --outdir=dist --servedir=. --serve=8080",
+        "dev": "npx esbuild public/js/*.js --bundle --outdir=dist --servedir=. --serve=8080",
   "build": "npm run build:public",
 "build:public": "npx esbuild public/js/*.js --bundle --minify --outdir=dist && node -e \"const fs = require('fs-extra'); fs.ensureDir('public').then(() => Promise.all(['assets', 'dist'].map((f) => fs.copy(f, 'public/' + f)))).then(() => console.log('✅ Successfully!'))\";"
 
