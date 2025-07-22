@@ -15,7 +15,7 @@
         "lint:css": "stylelint css",
         "lint:html": "htmlhint **/*.html",
         "dev": "npx esbuild public/js/*.js --bundle --outdir=public/dist --servedir=public --serve=8080",
-"build": "npx esbuild public/js/*.js --bundle --minify --outdir=dist && copy public\\index.html dist\\index.html && xcopy public\\assets dist\\assets /E /I /Y && copy public\\guest.css dist\\guest.css",
+"build": "npx esbuild public/js/*.js --bundle --minify --outdir=dist && copy public\\index.html dist\\index.html && copy public\\css\\guest.css dist\\guest.css && xcopy assets dist\\assets /E /I /Y",
   "deploy": "npm run build && npx gh-pages -d dist"
     },
     "dependencies": {
