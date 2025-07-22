@@ -1,14 +1,15 @@
 {
+  "outputDirectory": "public",
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public"
-      }
+      "use": "@vercel/static-build"
     }
   ],
-  "scripts": {
-    "build": "npm run build:public"
-  }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
 }
